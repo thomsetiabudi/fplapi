@@ -63,7 +63,7 @@ def app():
             # Display the filtered dataframe
             st.dataframe(filtered_df2)
 
-            if tab_name = 'Defenders':
+            if tab_name == 'Defenders':
                 st.dataframe(df)
 
 
