@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 def read_csv(filename):
     df = pd.read_csv(filename)
@@ -64,7 +65,11 @@ def app():
             st.dataframe(filtered_df2)
 
             if tab_name == 'Defenders':
-                st.dataframe(df)
+                arr = np.random.normal(1, 1, size=100)
+                fig, ax = plt.subplots()
+                ax.hist(arr, bins=20)
+
+                st.pyplot(fig)
 
 
 if __name__ == '__main__':
