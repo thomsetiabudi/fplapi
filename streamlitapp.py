@@ -65,9 +65,9 @@ def app():
             st.dataframe(filtered_df2)
 
             if tab_name == 'Defenders':
-                arr = np.random.normal(1, 1, size=100)
-                fig, ax = plt.subplots()
-                ax.hist(arr, bins=20)
+                x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+                y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+                fig = plt.scatter(x, y)
                 st.pyplot(fig)
 
 
